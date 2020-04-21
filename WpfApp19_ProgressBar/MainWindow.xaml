@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp19_ProgressBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19_ProgressBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="170" Width="370">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <StackPanel>
+                <StackPanel Margin="5,10,5,5" Orientation="Horizontal">
+                    <ProgressBar x:Name="AProgressBar" Margin="25,0,0,0" Height="30" Width="180"
+                                 HorizontalAlignment="Left"
+                                 Minimum="0" Maximum="100"
+                                 ValueChanged="AProgressBar_ValueChanged"/>
+                    <TextBlock x:Name="ATxtBlock" Margin="10,0,0,0" Width="50"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               FontSize="20"
+                               Text="Xxx"/>
+                    <Button x:Name="AButton" Margin="10,0,0,0" Height="30" Width="60"
+                            Content="Run"
+                            Click="AButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Margin="5,10,5,5" Orientation="Horizontal">
+                    <Grid>
+                        <ProgressBar x:Name="BProgressBar" Margin="25,0,0,0" Height="30" Width="180"
+                                     HorizontalAlignment="Left"
+                                     Minimum="0" Maximum="100"
+                                     ValueChanged="BProgressBar_ValueChanged"/>
+                        <TextBlock x:Name="BTxtBlock" Margin="25,0,0,0"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   FontSize="20" TextAlignment="Center"
+                                   Text="Xxx"/>
+                    </Grid>
+                    <Button x:Name="BButton" Margin="10,0,0,0" Height="30" Width="60"
+                            Content="Run"
+                            Click="BButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Margin="5,10,5,5" Orientation="Horizontal">
+                    <Grid>
+                        <ProgressBar x:Name="CProgressBar" Margin="25,0,0,0" Height="30" Width="180"
+                                     HorizontalAlignment="Left"
+                                     Minimum="0" Maximum="100"/>
+                        <TextBlock x:Name="CTxtBlock" Margin="25,0,0,0"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   FontSize="14" TextAlignment="Center"
+                                   Text="Xxx"/>
+                    </Grid>
+                    <Button x:Name="CButton" Margin="10,0,0,0" Height="30" Width="60"
+                            Content="Run"
+                            Click="CButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

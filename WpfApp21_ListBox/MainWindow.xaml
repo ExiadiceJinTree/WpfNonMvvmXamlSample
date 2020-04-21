@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp21_ListBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp21_ListBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <ListBox x:Name="MyListBox" VerticalAlignment="Top" Margin="10" Width="260" Height="180">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding FileName}" Width="50" Height="50" Margin="10"/>
+                            <TextBlock Text="{Binding Name}" Margin="10"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <GroupBox x:Name="SelectionModeGrpBox" Header="Selection Mode" Margin="5,0,5,0">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="SingleModeRadioBtn" Content="Single" Checked="SelectionModeRadioBtn_Checked"/>
+                    <RadioButton x:Name="ExtendedModeRadioBtn" Content="Extended" Checked="SelectionModeRadioBtn_Checked"/>
+                    <RadioButton x:Name="MultipleModeRadioBtn" Content="Multiple" Checked="SelectionModeRadioBtn_Checked"/>
+                </StackPanel>
+            </GroupBox>
+            <Button x:Name="CheckButton" Content="Check" FontSize="20"
+                    Click="CheckButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

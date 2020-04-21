@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp23_TreeView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp23_TreeView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <TreeView FontSize="20">
+                <TreeViewItem Header="Dept.A">
+                    <TreeViewItem Header="Group.A">
+                        <TreeViewItem Header="Member 1"></TreeViewItem>
+                        <TreeViewItem Header="Member 2"></TreeViewItem>
+                        <TreeViewItem Header="Member 3"></TreeViewItem>
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeView>
+
+            <TreeView FontSize="20">
+                <TreeViewItem>
+                    <TreeViewItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Height="10" Width="10" Margin="6" Fill="Red"/>
+                            <TextBlock Text="Dept.B"/>
+                        </StackPanel>
+                    </TreeViewItem.Header>
+                    <TreeViewItem Header="Member 1"></TreeViewItem>
+                </TreeViewItem>
+            </TreeView>
+
+            <TreeView x:Name="CTreeView" FontSize="20">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate DataType="local:Dto" ItemsSource="{Binding Dtos}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp26_ToolBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp26_ToolBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="300">
+    <Grid>
+        <ToolBar Height="30" VerticalAlignment="Top">
+            <Button x:Name="flowerToolBarBtn" Click="flowerToolBarBtn_Click">
+                <Image Source="Images/flower-5038110_640.jpg"/>
+            </Button>
+            <Separator/>
+            <Button x:Name="sketchToolBarBtn" Click="sketchToolBarBtn_Click">
+                <Image Source="Images/sketch-4917782_640.png"/>
+            </Button>
+        </ToolBar>
+    </Grid>
+</Window>
